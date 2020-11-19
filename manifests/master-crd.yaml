@@ -1,0 +1,16 @@
+apiVersion: k8s.cncf.io/v1alpha1
+kind: NodeResourceTopology
+metadata:
+  name: kind-control-plane
+topologyPolicy: "single-numa-node"
+nodes:
+  - NUMAID: 0
+    Resources:
+      cpu: 3
+      example.com/deviceA: 1
+      example.com/deviceB: 2
+  - NUMAID: 1
+    Resources:
+      cpu: 3
+      example.com/deviceA: 2
+      example.com/deviceB: 1

@@ -1,0 +1,14 @@
+apiVersion: k8s.cncf.io/v1alpha1
+kind: NodeResourceTopology
+metadata:
+  name: kind-worker
+topologyPolicy: "single-numa-node"
+nodes:
+  - NUMAID: 0
+    Resources:
+      cpu: 3
+      example.com/deviceA: 3
+  - NUMAID: 1
+    Resources:
+      cpu: 3
+      example.com/deviceA: 3
